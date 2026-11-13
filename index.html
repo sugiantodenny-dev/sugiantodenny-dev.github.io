@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deny Eko Sugianto · Senior Backend Engineer</title>
+<meta name="description" content="Senior Backend Engineer with 8+ years of experience building high-traffic APIs and integration systems in Go for large-scale e-commerce platforms.">
+<meta property="og:title" content="Deny Eko Sugianto · Senior Backend Engineer">
+<meta property="og:description" content="Go, distributed systems and production reliability. Currently at Shopee International / SEA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+<style>
+:root{
+  --bg:#ffffff; --text:#222222; --muted:#666666; --navy:#14213D; --teal:#0E7C86; --purple:#5B21B6;
+  --chip:#E3F2F7; --chip-text:#0B6B75; --rule:#D5E3E8; --card:#F4FAFB; --max:880px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1724; --text:#E6EDF3; --muted:#9AA8B5; --navy:#FFFFFF; --teal:#4FD1DC; --purple:#A78BFA;
+    --chip:#16333A; --chip-text:#8BE0E8; --rule:#26384A; --card:#131E2E;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1724; --text:#E6EDF3; --muted:#9AA8B5; --navy:#FFFFFF; --teal:#4FD1DC; --purple:#A78BFA;
+  --chip:#16333A; --chip-text:#8BE0E8; --rule:#26384A; --card:#131E2E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Liberation Sans",Helvetica,sans-serif;font-size:16px;line-height:1.6}
+a{color:var(--purple);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
+nav .brand{font-weight:700;color:var(--navy)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav li a{color:var(--muted);font-size:14px;white-space:nowrap}
+nav li a:hover{color:var(--teal);text-decoration:none}
+#theme{background:none;border:1px solid var(--rule);border-radius:8px;color:var(--text);cursor:pointer;padding:4px 9px;font-size:14px}
+
+/* hero */
+.hero{padding:72px 0 40px}
+.hero h1{font-size:clamp(36px,7vw,56px);line-height:1.1;margin:0 0 8px;color:var(--navy)}
+.hero .role{font-size:20px;color:var(--teal);font-weight:700;margin:0 0 20px}
+.hero p.lead{margin:0 0 24px;max-width:720px}
+.hero b{font-weight:700}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:9px 18px;border-radius:8px;border:1px solid var(--teal);color:var(--teal);font-weight:700;font-size:14px}
+.btn:hover{text-decoration:none;background:var(--chip)}
+.btn.primary{background:var(--teal);color:#fff}
+.btn.primary:hover{opacity:.9;background:var(--teal)}
+.meta{margin-top:18px;color:var(--muted);font-size:14px}
+
+/* sections */
+section{padding:36px 0}
+h2{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:var(--chip);color:var(--chip-text);padding:8px 14px;border-radius:6px;font-size:14px}
+.chip.sm{font-size:12px;padding:3px 10px;border-radius:5px}
+
+/* experience */
+.job{margin-bottom:34px}
+.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.job h3{margin:0;font-size:19px;color:var(--purple)}
+.date{color:var(--muted);font-size:14px}
+.sub{margin:2px 0 10px}
+.sub span{color:var(--muted)}
+.job ul{margin:0;padding-left:20px}
+.job li{margin-bottom:6px}
+.job li::marker{font-size:.8em}
+li b{font-weight:700}
+
+/* projects */
+.grid{display:grid;gap:16px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:20px}
+.card h3{margin:0 0 8px;font-size:17px;color:var(--purple);display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.card p{margin:0 0 10px}
+.tech{font-size:13px;color:var(--muted)}
+
+/* education + skills */
+.edu{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-bottom:10px}
+.edu b{font-weight:700}
+.edu .school{color:var(--purple);font-weight:700}
+.skills{border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.skills .row{display:grid;grid-template-columns:190px 1fr;gap:12px;padding:12px 18px}
+.skills .row:nth-child(odd){background:var(--card)}
+.skills .k{color:var(--teal);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding-top:2px}
+h4{margin:28px 0 12px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+
+footer{padding:40px 0 60px;border-top:1px solid var(--rule);margin-top:20px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* lean */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--rule)}
+.tl li:last-child{border-bottom:0}
+.tl b{color:var(--purple)}
+.tl small{display:block;color:var(--muted);font-size:14px}
+@media (max-width:640px){
+  nav ul{display:none}
+  .skills .row{grid-template-columns:1fr;gap:2px}
+  .hero{padding-top:48px}
+}
+@media print{nav,#theme,.links{display:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Deny Eko Sugianto</span>
+    <ul><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li></ul>
+    <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+  </div>
+</nav>
+
+<header class="hero" id="about">
+  <div class="wrap">
+    <h1>Denny Sugianto</h1>
+    <p class="role">Software Engineer</p>
+    <p class="lead">8+ years building high-traffic APIs and integration systems in <b>Go</b> for large-scale e-commerce. Currently at <b>Shopee International / SEA</b>. Shopee ‘Value Star’ award for engineering ownership.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:dennysugianto1@gmail.com">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/denny-sugianto" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/sugiantodenny-dev" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="meta">📍 Jakarta, Indonesia</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="tl">
+      <li><span><b>Shopee International / SEA</b><small>Software Engineer · Go migration, 3PL integrations across SEA, TW and BR</small></span><span class="date">2022 – Present</span></li>
+      <li><span><b>Erloom Digital</b><small>Software Engineer · Built OKR and Workforce Management systems</small></span><span class="date">2019 – 2022</span></li>
+      <li><span><b>Auto Schäfer GmbH</b><small>Software Engineer · Inventory management system</small></span><span class="date">2018</span></li>
+      <li><span><b>ATJS (Import &amp; Export)</b><small>Software Engineer · Warehouse and shipment software</small></span><span class="date">2017</span></li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card"><h3>Legacy-to-Go Migration <span class="chip sm">Shopee</span></h3><p>Led the move from Python to a Go-based architecture, improving performance and scalability.</p><div class="tech">Go · Python · REST</div></article>
+      <article class="card"><h3>3PL Integration Platform <span class="chip sm">Shopee</span></h3><p>Connected multiple logistics providers via REST and Kafka events.</p><div class="tech">Go · Kafka · REST</div></article>
+      <article class="card"><h3>Tracking Number Deduplication <span class="chip sm">Shopee</span></h3><p>Guaranteed unique tracking numbers under concurrent load with transactional locking.</p><div class="tech">Go · MySQL · Distributed Systems</div></article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="chips">
+      <span class="chip">Go</span><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">Java</span><span class="chip">Rust</span>
+      <span class="chip">gRPC &amp; REST</span><span class="chip">Kafka</span><span class="chip">Microservices</span>
+      <span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span>
+      <span class="chip">Docker</span><span class="chip">GitLab CI/CD</span>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Deny Eko Sugianto</span>
+    <span><a href="mailto:dennysugianto1@gmail.com">Email</a> · <a href="https://linkedin.com/in/denny-sugianto" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/sugiantodenny-dev" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var root = document.documentElement, btn = document.getElementById('theme');
+  btn.addEventListener('click', function(){
+    var dark = root.getAttribute('data-theme') === 'dark' ||
+      (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme', dark ? 'light' : 'dark');
+  });
+})();
+</script>
+</body>
+</html>
