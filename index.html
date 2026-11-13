@@ -3,151 +3,115 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Deny Eko Sugianto · Senior Backend Engineer</title>
-<meta name="description" content="Senior Backend Engineer with 8+ years of experience building high-traffic APIs and integration systems in Go for large-scale e-commerce platforms.">
-<meta property="og:title" content="Deny Eko Sugianto · Senior Backend Engineer">
-<meta property="og:description" content="Go, distributed systems and production reliability. Currently at Shopee International / SEA.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+<title>Denny Sugianto · Software Engineer</title>
+<meta name="description" content="Software Engineer building high-traffic APIs and integration systems in Go for large-scale e-commerce.">
+<meta property="og:title" content="Denny Sugianto · Software Engineer">
+<meta property="og:description" content="Go, distributed systems and production reliability. Currently at Shopee International.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#ffffff; --text:#222222; --muted:#666666; --navy:#14213D; --teal:#0E7C86; --purple:#5B21B6;
-  --chip:#E3F2F7; --chip-text:#0B6B75; --rule:#D5E3E8; --card:#F4FAFB; --max:880px;
+  --bg:#FBFAF7; --text:#2A2F36; --muted:#7A828C; --head:#14213D; --accent:#0E7C86; --link:#5B21B6;
+  --chip:#E3F2F7; --chip-text:#0B6B75; --rule:#E4E2DC;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0F1724; --text:#E6EDF3; --muted:#9AA8B5; --navy:#FFFFFF; --teal:#4FD1DC; --purple:#A78BFA;
-    --chip:#16333A; --chip-text:#8BE0E8; --rule:#26384A; --card:#131E2E;
+    --bg:#0E131B; --text:#D5DBE2; --muted:#8893A0; --head:#F4F1EA; --accent:#4FD1DC; --link:#B9A2FA;
+    --chip:#15303A; --chip-text:#8BE0E8; --rule:#222B37;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0F1724; --text:#E6EDF3; --muted:#9AA8B5; --navy:#FFFFFF; --teal:#4FD1DC; --purple:#A78BFA;
-  --chip:#16333A; --chip-text:#8BE0E8; --rule:#26384A; --card:#131E2E;
+  --bg:#0E131B; --text:#D5DBE2; --muted:#8893A0; --head:#F4F1EA; --accent:#4FD1DC; --link:#B9A2FA;
+  --chip:#15303A; --chip-text:#8BE0E8; --rule:#222B37;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Liberation Sans",Helvetica,sans-serif;font-size:16px;line-height:1.6}
-a{color:var(--purple);text-decoration:none}
-a:hover{text-decoration:underline}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
 
-/* nav */
-nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--rule)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
-nav .brand{font-weight:700;color:var(--navy)}
-nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;overflow-x:auto}
-nav li a{color:var(--muted);font-size:14px;white-space:nowrap}
-nav li a:hover{color:var(--teal);text-decoration:none}
-#theme{background:none;border:1px solid var(--rule);border-radius:8px;color:var(--text);cursor:pointer;padding:4px 9px;font-size:14px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.mark{font-family:var(--serif);font-size:18px;color:var(--head);letter-spacing:.01em}
+#theme{background:none;border:0;color:var(--muted);cursor:pointer;font-size:18px;padding:4px 8px;border-radius:8px;transition:color .2s}
+#theme:hover{color:var(--accent)}
 
-/* hero */
-.hero{padding:72px 0 40px}
-.hero h1{font-size:clamp(36px,7vw,56px);line-height:1.1;margin:0 0 8px;color:var(--navy)}
-.hero .role{font-size:20px;color:var(--teal);font-weight:700;margin:0 0 20px}
-.hero p.lead{margin:0 0 24px;max-width:720px}
-.hero b{font-weight:700}
-.links{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-block;padding:9px 18px;border-radius:8px;border:1px solid var(--teal);color:var(--teal);font-weight:700;font-size:14px}
-.btn:hover{text-decoration:none;background:var(--chip)}
-.btn.primary{background:var(--teal);color:#fff}
-.btn.primary:hover{opacity:.9;background:var(--teal)}
-.meta{margin-top:18px;color:var(--muted);font-size:14px}
+.hero{padding:72px 0 56px;animation:rise .8s ease both}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 22px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,8vw,72px);line-height:1.05;letter-spacing:-.02em;color:var(--head);margin:0 0 28px}
+.lead{font-size:19px;line-height:1.75;color:var(--text);max-width:600px;margin:0 0 34px}
+.lead em{font-family:var(--serif);font-style:italic;color:var(--head)}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:8px 26px;font-size:14px}
+.links a{color:var(--head);border-bottom:1px solid var(--rule);padding-bottom:2px;transition:border-color .2s,color .2s}
+.links a:hover{color:var(--accent);border-color:var(--accent)}
+.links .cta{background:var(--head);color:var(--bg);border:0;padding:10px 20px;border-radius:999px;font-weight:500;transition:opacity .2s}
+.links .cta:hover{opacity:.85;color:var(--bg)}
+.loc{margin-top:26px;font-size:13px;color:var(--muted)}
 
-/* sections */
-section{padding:36px 0}
-h2{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+section{display:grid;grid-template-columns:150px 1fr;gap:12px 32px;padding:40px 0;border-top:1px solid var(--rule);animation:rise .8s ease both}
+h2{margin:6px 0 0;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--muted)}
 
-/* chips */
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chip{background:var(--chip);color:var(--chip-text);padding:8px 14px;border-radius:6px;font-size:14px}
-.chip.sm{font-size:12px;padding:3px 10px;border-radius:5px}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 20px;padding:0 0 26px}
+.item:last-child{padding-bottom:0}
+.item h3{margin:0;font-family:var(--serif);font-weight:500;font-size:20px;color:var(--head);line-height:1.35}
+.date{font-size:13px;color:var(--muted);padding-top:5px;white-space:nowrap}
+.item p{grid-column:1/-1;margin:4px 0 0;color:var(--muted);font-size:15px}
+.item .tag{display:inline-block;margin-left:10px;vertical-align:middle;background:var(--chip);color:var(--chip-text);font-family:var(--sans);font-size:11px;font-weight:500;padding:2px 10px;border-radius:999px;letter-spacing:.02em}
 
-/* experience */
-.job{margin-bottom:34px}
-.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-.job h3{margin:0;font-size:19px;color:var(--purple)}
-.date{color:var(--muted);font-size:14px}
-.sub{margin:2px 0 10px}
-.sub span{color:var(--muted)}
-.job ul{margin:0;padding-left:20px}
-.job li{margin-bottom:6px}
-.job li::marker{font-size:.8em}
-li b{font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);color:var(--chip-text);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:500}
 
-/* projects */
-.grid{display:grid;gap:16px}
-.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:20px}
-.card h3{margin:0 0 8px;font-size:17px;color:var(--purple);display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.card p{margin:0 0 10px}
-.tech{font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--rule);margin-top:20px;padding:36px 0 64px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--muted)}
+footer a:hover{color:var(--accent)}
 
-/* education + skills */
-.edu{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-bottom:10px}
-.edu b{font-weight:700}
-.edu .school{color:var(--purple);font-weight:700}
-.skills{border:1px solid var(--rule);border-radius:12px;overflow:hidden}
-.skills .row{display:grid;grid-template-columns:190px 1fr;gap:12px;padding:12px 18px}
-.skills .row:nth-child(odd){background:var(--card)}
-.skills .k{color:var(--teal);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding-top:2px}
-h4{margin:28px 0 12px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
-
-footer{padding:40px 0 60px;border-top:1px solid var(--rule);margin-top:20px;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-
-/* lean */
-.tl{list-style:none;margin:0;padding:0}
-.tl li{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--rule)}
-.tl li:last-child{border-bottom:0}
-.tl b{color:var(--purple)}
-.tl small{display:block;color:var(--muted);font-size:14px}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
 @media (max-width:640px){
-  nav ul{display:none}
-  .skills .row{grid-template-columns:1fr;gap:2px}
-  .hero{padding-top:48px}
+  section{grid-template-columns:1fr;gap:18px}
+  .hero{padding:44px 0 40px}
+  .lead{font-size:17px}
 }
-@media print{nav,#theme,.links{display:none}}
+@media print{#theme{display:none}}
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<nav>
-  <div class="wrap">
-    <span class="brand">Deny Eko Sugianto</span>
-    <ul><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li></ul>
+  <div class="top">
+    <span class="mark">D. E. Sugianto</span>
     <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
   </div>
-</nav>
 
-<header class="hero" id="about">
-  <div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Software Engineer</p>
     <h1>Denny Sugianto</h1>
-    <p class="role">Software Engineer</p>
-    <p class="lead">8+ years building high-traffic APIs and integration systems in <b>Go</b> for large-scale e-commerce. Currently at <b>Shopee International / SEA</b>. Shopee ‘Value Star’ award for engineering ownership.</p>
-    <div class="links">
-      <a class="btn primary" href="mailto:dennysugianto1@gmail.com">Email me</a>
-      <a class="btn" href="https://linkedin.com/in/denny-sugianto" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://github.com/sugiantodenny-dev" target="_blank" rel="noopener">GitHub</a>
-    </div>
-    <p class="meta">📍 Jakarta, Indonesia</p>
-  </div>
-</header>
+    <p class="lead">I build high-traffic APIs and integration systems in <em>Go</em> for large-scale e-commerce. 8+ years in, currently at Shopee International / SEA, where I was recognised with the ‘Value Star’ award for engineering ownership.</p>
+    <nav class="links">
+      <a class="cta" href="mailto:dennysugianto1@gmail.com">Get in touch</a>
+      <a href="https://linkedin.com/in/denny-sugianto" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/sugiantodenny-dev" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <p class="loc">Jakarta, Indonesia</p>
+  </header>
 
-<main class="wrap">
   <section id="experience">
     <h2>Experience</h2>
-    <ul class="tl">
-      <li><span><b>Shopee International / SEA</b><small>Software Engineer · Go migration, 3PL integrations across SEA, TW and BR</small></span><span class="date">2022 – Present</span></li>
-      <li><span><b>Erloom Digital</b><small>Software Engineer · Built OKR and Workforce Management systems</small></span><span class="date">2019 – 2022</span></li>
-      <li><span><b>Auto Schäfer GmbH</b><small>Software Engineer · Inventory management system</small></span><span class="date">2018</span></li>
-      <li><span><b>ATJS (Import &amp; Export)</b><small>Software Engineer · Warehouse and shipment software</small></span><span class="date">2017</span></li>
-    </ul>
+    <div>
+      <div class="item"><h3>Shopee International</h3><span class="date">2022 – Present</span><p>Owning the 3PL integrations that power order fulfilment and shipment tracking across ID, SG, MY, TW, PH, VN, TH, BR and beyond.</p></div>
+      <div class="item"><h3>Erloom Digital</h3><span class="date">2019 – 2022</span><p>Built OKR and Workforce Management systems end to end.</p></div>
+      <div class="item"><h3>Auto Schäfer GmbH</h3><span class="date">2018</span><p>Inventory management system.</p></div>
+      <div class="item"><h3>ATJS (Import &amp; Export)</h3><span class="date">2017</span><p>Warehouse and shipment software.</p></div>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="grid">
-      <article class="card"><h3>Legacy-to-Go Migration <span class="chip sm">Shopee</span></h3><p>Led the move from Python to a Go-based architecture, improving performance and scalability.</p><div class="tech">Go · Python · REST</div></article>
-      <article class="card"><h3>3PL Integration Platform <span class="chip sm">Shopee</span></h3><p>Connected multiple logistics providers via REST and Kafka events.</p><div class="tech">Go · Kafka · REST</div></article>
-      <article class="card"><h3>Tracking Number Deduplication <span class="chip sm">Shopee</span></h3><p>Guaranteed unique tracking numbers under concurrent load with transactional locking.</p><div class="tech">Go · MySQL · Distributed Systems</div></article>
+    <div>
+      <div class="item"><h3>3PL Integration Platform<span class="tag">Shopee</span></h3><p>Connected multiple logistics providers through REST and Kafka events.</p></div>
+      <div class="item"><h3>Legacy-to-Go Migration<span class="tag">Shopee</span></h3><p>Led the move from Python to a Go-based architecture, improving performance and scalability.</p></div>
+      <div class="item"><h3>Tracking Number Deduplication<span class="tag">Shopee</span></h3><p>Guaranteed unique tracking numbers under concurrent load with transactional locking.</p></div>
     </div>
   </section>
 
@@ -160,19 +124,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <span class="chip">Docker</span><span class="chip">GitLab CI/CD</span>
     </div>
   </section>
-</main>
 
-<footer id="contact">
-  <div class="wrap">
-    <span>© <span id="yr">2026</span> Deny Eko Sugianto</span>
+  <footer>
+    <span>© <span id="yr">2026</span> Denny Sugianto</span>
     <span><a href="mailto:dennysugianto1@gmail.com">Email</a> · <a href="https://linkedin.com/in/denny-sugianto" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/sugiantodenny-dev" target="_blank" rel="noopener">GitHub</a></span>
-  </div>
-</footer>
+  </footer>
+
+</div>
 <script>
 (function(){
   document.getElementById('yr').textContent = new Date().getFullYear();
-  var root = document.documentElement, btn = document.getElementById('theme');
-  btn.addEventListener('click', function(){
+  var root = document.documentElement;
+  document.getElementById('theme').addEventListener('click', function(){
     var dark = root.getAttribute('data-theme') === 'dark' ||
       (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
     root.setAttribute('data-theme', dark ? 'light' : 'dark');
